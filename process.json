@@ -1,0 +1,14 @@
+{
+  "apps": [{
+    "name": "screenshot",
+    "max_memory_restart": "300M",
+    "script": "src/app.js",
+    "instances": 3,
+    "exec_mode": "cluster",
+    "cwd": "./",
+    "out_file": "./logs/screenshot-out.log",
+    "error_file": "./logs/screenshot-err.log",
+    "log_date_format": "YYYY-MM-DD HH:mm Z",
+    "watch": ["package.json"]
+  }]
+}
