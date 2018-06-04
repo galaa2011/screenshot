@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 
 module.exports = async (ctx) => {
   const query = ctx.query;
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({args: ['--no-sandbox']});
   const page = await browser.newPage();
   if (query.platform !== 'pc') {
     const userAgent = 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 sina-screen-shot Mobile/13B143 Safari/601.1';
